@@ -10,7 +10,9 @@
     
     function AddProductController(UnitTestProductService) {
         var ap = this;
-        
+
+        ap.responseStatus = '';
+
         ap.newProduct = {
             productId: null,
             productName: "",
@@ -27,9 +29,11 @@
         ap.submit = function(product) {
             UnitTestProductService.addProduct(product)
                 .then(function(response) {
+                    ap.responseStatus = response.status;
                     console.log('Product Saved! ' + response.status);
                 })
                 .catch(function(response) {
+                    ap.responseStatus = response.status;
                     console.log('Product Not Saved! ' + response.status);
                 });
         };
