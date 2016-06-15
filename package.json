@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/jaewhicha/angular-unit-seed#readme",
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-wiredep": "0.0.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-jasmine": "^1.0.2",

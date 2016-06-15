@@ -1,0 +1,32 @@
+{
+  "name": "angular-unit-seed",
+  "description": "A simple AngularJS project that demostrates unit tests.",
+  "main": "app.js",
+  "authors": [
+    "Jay W."
+  ],
+  "license": "SEE LICENSE IN LICENSE",
+  "keywords": [
+    "angularjs",
+    "unit",
+    "tests",
+    "jasmine"
+  ],
+  "homepage": "https://github.com/jaewhicha/angular-unit-seed",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.6",
+    "angular-mocks": "^1.5.6",
+    "angular-resource": "^1.5.6",
+    "angular-route": "^1.5.6",
+    "angular-sanitize": "^1.5.6",
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.4"
+  }
+}
