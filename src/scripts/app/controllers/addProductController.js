@@ -25,8 +25,13 @@
         };
         
         ap.submit = function(product) {
-            var response = UnitTestProductService.addProduct(product);
-            console.log(response);
+            UnitTestProductService.addProduct(product)
+                .then(function(response) {
+                    console.log('Product Saved! ' + response.status);
+                })
+                .catch(function(response) {
+                    console.log('Product Not Saved! ' + response.status);
+                });
         };
     }
 

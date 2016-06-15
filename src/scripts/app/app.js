@@ -12,19 +12,13 @@
             
             $routeProvider
                 .when('/', {
-                    templateUrl: '../src/views/productsView.html',
-                    controller: 'ProductsController',
-                    controllerAs: 'pc'
+                    templateUrl: '../src/views/productsView.html'
                 })
                 .when('/Products', {
-                    templateUrl: '../src/views/productsView.html',
-                    controller: 'ProductsController',
-                    controllerAs: 'pc'
+                    templateUrl: '../src/views/productsView.html'
                 })
                 .when('/AddProduct', {
-                    templateUrl: '../src/views/addProductView.html',
-                    controller: 'AddProductController',
-                    controllerAs: 'ap'
+                    templateUrl: '../src/views/addProductView.html'
                 })
                 .when('/About', {
                     templateUrl: '../src/views/aboutView.html'

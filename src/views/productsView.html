@@ -1,1 +1,30 @@
-<div id="products-page">Products Page</div>
+<div id="products-page" class="container" ng-controller="ProductsController as pc">
+    <div class="page-header">
+        <h1>Product List</h1>
+    </div>
+    <div class="col-lg-12 m-t-20">
+        <div class="table-responsive">
+            <table id="product-table" class="table table-condensed">
+                <tr>
+                    <th>Product ID</th>
+                    <th>Product Name</th>
+                    <th>Product Code</th>
+                    <th>Release Date</th>
+                    <th>Cost</th>
+                    <th>Price</th>
+                </tr>
+                <tr ng-repeat="product in pc.productModel track by $index">
+                    <td>{{product.productId}}</td>
+                    <td>{{product.productName}}</td>
+                    <td>{{product.productCode}}</td>
+                    <td>{{product.releaseDate}}</td>
+                    <td>{{product.cost | currency}}</td>
+                    <td>{{product.price | currency}}</td>
+                </tr>
+            </table>
+            <div class="col-lg-4">
+                <h4>Total Cost of all Products: {{pc.totalCost(pc.productModel) | currency}}</h4>
+            </div>
+        </div>
+    </div>
+</div>

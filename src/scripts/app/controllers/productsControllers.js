@@ -10,8 +10,17 @@
     
         function ProductsController(UnitTestProductService) {
             var pc = this;
-            
-            pc.productModel = UnitTestProductService.getProducts();
+
+            pc.productModel = {};
+            pc.test = 'hello!';
+
+            UnitTestProductService.getProducts()
+                .then(function(response)  {
+                    pc.productModel = response.data;
+                })
+                .catch(function(response) {
+                    console.log("There was an error retrieving product list - " + response.status);
+                });
 
             pc.totalCost = function(model) {
                 var totalCost = 0;
@@ -21,7 +30,8 @@
                     }
                 }
                 return totalCost
-            }
+            };
 
+            pc.test = 'nope!';
         }
 }());

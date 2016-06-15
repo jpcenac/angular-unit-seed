@@ -1,1 +1,60 @@
-<div id="add-product">Add Product</div>
+<div id="add-product" class="container" ng-controller="AddProductController as ap">
+    <div class="page-header">
+        <h1>Add A Product</h1>
+    </div>
+    <div class="col-lg-12">
+        <form>
+            <fieldset class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text"
+                       class="form-control"
+                       id="productName"
+                       placeholder="Name of the Product"
+                       ng-model="ap.newProduct.productName">
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="productCode">Product Code</label>
+                <input type="text"
+                       class="form-control"
+                       id="productCode"
+                       placeholder="Model Code of the Product"
+                       ng-model="ap.newProduct.productCode">
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="releaseDate">Release Date</label>
+                <input type="text"
+                       class="form-control"
+                       id="releaseDate"
+                       placeholder="Release Date of the Product"
+                       ng-model="ap.newProduct.releaseDate">
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="description">Description</label>
+                <input type="text"
+                       class="form-control"
+                       id="description"
+                       placeholder="Short Description of the Product"
+                       ng-model="ap.newProduct.description">
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="cost">Cost</label>
+                <input type="number"
+                       class="form-control"
+                       id="cost"
+                       placeholder="Base Cost of the Product"
+                       ng-model="ap.newProduct.cost">
+            </fieldset>
+            <fieldset class="form-group">
+                <label for="price">Price</label>
+                <input type="number"
+                       class="form-control"
+                       id="price"
+                       placeholder="MSRP of the Product"
+                       ng-model="ap.newProduct.price">
+            </fieldset>
+        </form>
+    </div>
+    <div class="col-lg-12">
+        <button type="button" class="btn btn-primary" ng-click="ap.submit(ap.newProduct)">Submit</button>
+    </div>
+</div>

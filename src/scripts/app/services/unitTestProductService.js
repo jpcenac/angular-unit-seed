@@ -11,23 +11,11 @@
     function UnitTestProductService($http) {
 
         var _getProducts = function() {
-            $http.get('/api/products', {headers: {'Content-Type': 'application/json'}})
-                .then(function(response) {
-                    return response;
-                })
-                .catch(function(response) {
-                    return response;
-                })
+            return $http.get('/api/products', {});
         };
 
         var _addProduct = function(data) {
-            $http.put('/api/products', data, {headers: {'Content-Type': 'application/json'}})
-                .then(function(response) {
-                    return response;
-                })
-                .catch(function(response) {
-                    return response
-                })
+            return $http.post('/api/products', data, {});
         };
 
         return {
